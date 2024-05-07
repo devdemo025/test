@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Gameplay";
+  src: url(assets/font/Gameplay.woff) format("woff");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-gradient: linear-gradient(
+    144deg,
+    rgba(78, 76, 89, 1) 7%,
+    rgba(56, 54, 68, 1) 21%,
+    rgba(34, 32, 48, 1) 56%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+
+  --light-blue-gradient: radial-gradient(
+    circle,
+    rgba(79, 74, 113, 0.8547794117647058) 10%,
+    rgba(87, 83, 115, 0.8071603641456583) 38%,
+    rgba(52, 49, 75, 0.835171568627451) 70%
+  );
+
+  --blue-v-gradient: radial-gradient(
+    circle,
+    rgba(110, 87, 124, 1) 38%,
+    rgba(63, 64, 91, 1) 70%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-40 pl-20;
+  }
+
+  .padding-r {
+    @apply sm:pr-40 pr-20;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .margin-r {
+    @apply sm:mr-20 mr-10;
+  }
+
+  .margin-l {
+    @apply sm:ml-20 ml-10;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+}
+
+.feature-card:hover {
+  background: var(--blue-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.font-gameplay {
+  font-family: "Gameplay", sans-serif;
+}
+
+.light-blue {
+  background: var(--light-blue-gradient);
+  filter: blur(123px);
+}
+
+.blue-v {
+  background: var(--blue-v-gradient);
+  filter: blur(253px);
+}
